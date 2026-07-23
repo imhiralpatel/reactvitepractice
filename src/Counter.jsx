@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './css/style.css'
+import UserProfile from "./UserProfile";
 
 const Counter=({count, Data})=>{
 
@@ -61,94 +62,106 @@ const Counter=({count, Data})=>{
         <>
         <div>
 
-            <h3 className="heading">External Style</h3>
-            
-            <div className="container">
-                
-                <div className="user-card">
-                    <img className="img-style" src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div className="text-wrap">
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
-                    </div>
-                </div>
+            <div>
+               <h3>Style With CSS Module in React JS</h3> 
 
+               <UserProfile />
             </div>
+
+            <div>
+                <h3 className="heading">External Style</h3>
                 
-            <h3 style={{color:'red'}}>
-                Inline CSS AND Style Component
-            </h3>
-            <button onClick={()=>updateTheme('grey', 'red')}>Grey Theme</button>
-            <button onClick={()=>updateTheme('white', 'black')}>Default Theme</button>
-            <button onClick={()=>setGrid(!grid)}>Toggle Grid</button>
-
-            <div style={{display: grid?'flex':'block', flexWrap:'wrap'}}>
-
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                <div className="container">
+                    
+                    <div className="user-card">
+                        <img className="img-style" src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div className="text-wrap">
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                </div>
+            </div>
+
+            <div>
+                    
+                <h3 style={{color:'red'}}>
+                    Inline CSS AND Style Component
+                </h3>
+
+                <button onClick={()=>updateTheme('grey', 'red')}>Grey Theme</button>
+                <button onClick={()=>updateTheme('white', 'black')}>Default Theme</button>
+                <button onClick={()=>setGrid(!grid)}>Toggle Grid</button>
+
+                <div style={{display: grid?'flex':'block', flexWrap:'wrap'}}>
+
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
-                </div>
 
-                <div style={cardStyle}>
-                    <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
-                    <div style={{padding:'5px', color:textcolor}}>
-                        <h4>Hiral Patel</h4>
-                        <p>Software Developer</p>
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
                     </div>
+
+                    <div style={cardStyle}>
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <div style={{padding:'5px', color:textcolor}}>
+                            <h4>Hiral Patel</h4>
+                            <p>Software Developer</p>
+                        </div>
+                    </div>
+
+
                 </div>
-
-
             </div>
             
 
