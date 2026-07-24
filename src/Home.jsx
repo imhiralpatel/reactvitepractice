@@ -41,29 +41,34 @@ function Home(){
     return(
         <>
         <div>
-<h1>
-    {title?title:"Title Not Found"}
-</h1>
-<br />
-<h2>{x/y}</h2>
-<h1>
-    {fruit()}
-</h1>
-<h3>
-    {userObj.email}
-</h3>
-<h3>
-    {userArray[1]}
-</h3>
-<h1>
-{callOpertation(3, 18, "*")}
-</h1>
-<input type="text" value={userObj.name} id={userObj.name} />
-<h1>Event and Function Call</h1>
-<button onClick={callFun}>click Me</button>
-<button onClick={()=>fruitName('Apple')}>Apple</button>
-<button onClick={()=>fruitName('Banana')}>Banana</button>
-<img src={path} alt="Niyai Urban" />
+            <h2 style={{color:"maroon"}}>13. Event and Function Call</h2>
+            <h3>
+                {title?title:"Title Not Found"}
+            </h3>
+            <br />
+            <h3>{x/y}</h3>
+            <h3>
+                {fruit()}
+            </h3>
+            <h3>
+                {userObj.email}
+            </h3>
+            <h3>
+                {userArray[1]}
+            </h3>
+            <h3>
+            {callOpertation(3, 18, "*")}
+            </h3>
+            
+            <br />
+
+            <input type="text" value={userObj.name} id={userObj.name} />
+            
+            <button onClick={callFun}>click Me</button>
+            <button onClick={()=>fruitName('Apple')}>Apple</button>
+            <button onClick={()=>fruitName('Banana')}>Banana</button>
+            <br />
+            <img src={path} alt="Niyai Urban" style={{width:'200px',height:'200px'}} />
         </div>
 
         </>

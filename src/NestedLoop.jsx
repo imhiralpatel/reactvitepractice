@@ -72,7 +72,7 @@ function NestedLoop(){
     return(
         <>
         <div>
-            <h3>Nested Looping with component</h3>
+            <h2 style={{color:"maroon"}}>26. Array Nested Looping with component</h2>
             {
                 collegeData.map((college, index)=>(
                     <div key={index}>

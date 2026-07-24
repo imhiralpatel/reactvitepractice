@@ -6,6 +6,10 @@ import Input from "./input";
 import NestedLoop from "./NestedLoop";
 import Prop from "./Props";
 import Skills from "./Skills";
+import PassFun from "./PassFun";
+import State from "./State";
+import Home from "./Home";
+import Hooks from "./Hooks";
 
 
 function App() {
@@ -35,19 +39,57 @@ function App() {
 
 
       
+      <PassFun />
+      
+      <hr />
+      <Home />
 
-      <Counter count={count} Data={data} />
+      <hr />
+
+      <State />
+
+      <hr />
+
+      <h2 style={{color:"maroon"}}>18. Prop in react js </h2>
+      
+      <Prop data={userObj} sname={userName} />
+      <Prop data={userObj2} />
+
+      <hr />
+      
+      <Hooks />
+
+      <hr />
+
+      <Effect />
+
+      <hr />
+
+
+      <hr />
+      <Input />
+
+      <Skills />
+
+      <hr />
+
+      <NestedLoop />
+      
+      <hr />
+
+      <Controlled />
+
+<hr />
+      
       <button onClick={()=>setCount(count + 1)}>Counter {count}</button>
       <button onClick={()=>setData(data + 1)}>Data {data}</button>
 
+      <Counter count={count} Data={data} />
+    
+      <hr />
 
-      <Effect />
-      <NestedLoop />
-      <Controlled />
-      <Input />
-      <Skills />
-      <Prop data={userObj} sname={userName} />
-      <Prop data={userObj2} />
+
+      
     </div>
     </>
   )

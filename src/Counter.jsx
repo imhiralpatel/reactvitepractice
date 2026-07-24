@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import './css/style.css'
 import UserProfile from "./UserProfile";
 
+
 const Counter=({count, Data})=>{
 
+    
     const handleCounter=()=>{
         console.log("handleCounter Called");
         
@@ -38,12 +40,15 @@ const Counter=({count, Data})=>{
         handleData();
     },[Data])
     
+    // dynamic
     const [cardStyle, setCardStyle]=useState({
                 border:'2px solid #cccccc3b',
                 width:'200px',
                 boxShadow:'1px 2px 3px 0px #cccccc57',
                 margin:'10px'
             })
+
+            // Conditional
     // const cardStyle={
     //             border:'2px solid #cccccc3b',
     //             width:'200px',
@@ -58,18 +63,32 @@ const Counter=({count, Data})=>{
         setTextColor(textColor)
     }
 
+    
+
     return(
         <>
         <div>
+            <h1>Counter Component Value {count}</h1>
+
+            <h1>
+                <span style={{color:'red'}}>
+                    Data Component Value
+                    </span> {Data}
+            </h1>
+            
+            <hr />
 
             <div>
-               <h3>Style With CSS Module in React JS</h3> 
+
+               <h2 style={{color:"maroon"}}>35. Style With CSS Module in React JS</h2> 
 
                <UserProfile />
             </div>
 
+            <hr />
+
             <div>
-                <h3 className="heading">External Style</h3>
+                <h2 className="heading">34. External Style</h2>
                 
                 <div className="container">
                     
@@ -84,11 +103,13 @@ const Counter=({count, Data})=>{
                 </div>
             </div>
 
+            <hr />
+
             <div>
                     
-                <h3 style={{color:'red'}}>
-                    Inline CSS AND Style Component
-                </h3>
+                <h2 style={{color:'red'}}>
+                    32. Inline CSS AND Style Component
+                </h2>
 
                 <button onClick={()=>updateTheme('grey', 'red')}>Grey Theme</button>
                 <button onClick={()=>updateTheme('white', 'black')}>Default Theme</button>
@@ -163,14 +184,6 @@ const Counter=({count, Data})=>{
 
                 </div>
             </div>
-            
-
-            <h1>Counter Component Value {count}</h1>
-            <h1>
-                <span style={{color:'red'}}>
-                    Data Component Value
-                    </span> {Data}
-            </h1>
             
 
         </div>

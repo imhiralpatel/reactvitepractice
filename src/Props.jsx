@@ -4,12 +4,14 @@ function Prop({data, sname="User"}) {
     return(
         <>
         <div>
+            <h3 style={{color:"maroon"}}>19. Pass JSX with Props react js </h3>
+
             <Student>
-                <h1 style={{color:'red'}}>
+                <h3 style={{color:'red'}}>
                     Name : {sname}
-                </h1>
+                </h3>
             </Student>
-            <h2>Prop in react js </h2>
+
             <h5>Name : {data.name}</h5>
             <h5>Age : {data.age}</h5>
             <h5>Email : {data.email}</h5>

@@ -27,7 +27,7 @@ function Effect(){
     // Call on changing single state / prop
     useEffect(()=>{
         callOnce();
-    }, [counter])
+    }, [callOnce])
 
 
     // call on changing both state / prop
@@ -39,7 +39,7 @@ function Effect(){
     return(
         <>
         <div>
-            <h3>useEffect Hook</h3>
+            <h2 style={{color:"maroon"}}>28. useEffect Hook</h2>
             <button onClick={()=>setCounter(counter + 1)}>counter {counter}</button>
             <button onClick={()=>setData(data + 1)}>Data {data}</button>
 

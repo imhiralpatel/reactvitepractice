@@ -5,7 +5,7 @@ function Input(){
     return(
         <>
         <div>
-            <h3>Get input field value</h3>
+            <h2 style={{color:"maroon"}}>20. input field value</h2>
 
             <input type="text" onChange={(event)=>setValue(event.target.value)} value={val} placeholder="Enter Name" />
             

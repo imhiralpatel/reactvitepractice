@@ -45,7 +45,7 @@ function Skills(){
     return(
         <>
         <div>
-            <h3>Handle Checkbox in react js</h3>
+            <h2 style={{color:"maroon"}}>22. Handle Checkbox in react js</h2>
             <h5>Select Your Skills</h5>
             <input onChange={handleSkills} type="checkbox" id="php" value="PHP" />
             <label htmlFor="php">PHP</label>
@@ -65,7 +65,7 @@ function Skills(){
             <br />
             <h4>{skills.toString()}</h4>
 
-            <h3>Handel Redio and Dropdown</h3>
+            <h2 style={{color:"maroon"}}>23. Handle Redio and Dropdown</h2>
             <h4>select Gender</h4>
 
             <input type="radio" name="gender" id="male" onChange={(event)=>setGender(event.target.value)} value={'male'} checked={gender == 'male'} />
@@ -89,7 +89,7 @@ function Skills(){
             <br />
             <br />
             
-            <h3>Loop in JSX with Map Function</h3>
+            <h2 style={{color:"maroon"}}>24. Loop in JSX with Map Function</h2>
 
 <table border="1">
                 <thead>
@@ -135,7 +135,7 @@ function Skills(){
             </table>
 
             <br />
-            <h3>Reuse Component in React</h3>
+            <h2 style={{color:"maroon"}}>25. Reuse Component in React</h2>
             <br />
             {
                 userData.map((user, index)=>(

@@ -12,15 +12,15 @@ function State(){
     }
     return(
         <>
-        <h1>
-            State in React JS
-        </h1>
+        <h2 style={{color:"maroon"}}>
+            14. State in React JS
+        </h2>
         <h2>{fruit}</h2>
         <button onClick={handleFruit}>Change Fruit Name</button>
 
-        <h1>
-            Toggle in React Js
-        </h1>
+        <h2 style={{color:"maroon"}}>
+            16. Hide & Show Toggle in React Js
+        </h2>
         
         <button onClick={()=>setDisplay(!display)}>Toggle</button>
         {
@@ -28,9 +28,9 @@ function State(){
         }
 
 
-        <h1>
-            Multiple Condition in React Js
-        </h1>
+        <h2 style={{color:"maroon"}}>
+            17. Multiple Condition Else-IF in React Js
+        </h2>
         <button onClick={()=>setCounter(counter + 1)}>Counter</button>
         {
             counter==1?<User />
