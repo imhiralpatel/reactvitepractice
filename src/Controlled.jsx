@@ -3,11 +3,13 @@ import Clock from "./Clock";
 
 function Controlled(){
 
+    // Controlled Component
     const [name,setName]=useState('');
     const [pass,setPass]=useState('');
     const [email,setEmail]=useState('');
     const[color, setColor]=useState('pink')
 
+    // Uncontrolled Component
     const handleForm=(event)=>{
         event.preventDefault();
 
@@ -17,6 +19,7 @@ function Controlled(){
 
         console.log(user, password);
     }
+
 
     const userRef=useRef();
     const passwordRef=useRef();
@@ -29,6 +32,15 @@ function Controlled(){
         const password=passwordRef.current.value;
 
         console.log(user, password);
+    }
+
+    // Keep Your Components Pure
+    const Cup=({count})=>{
+        return(
+            <h3>
+                we have {count} guest and we have to make {count} cup of tea.
+            </h3>
+        )
     }
     
     return(
@@ -91,6 +103,11 @@ function Controlled(){
                     <button>Submit</button>
                 </form>
             </div>
+        </div>
+        <div>
+            <h2 style={{color:"maroon"}}>44. Keep Your Components Pure in React.js</h2>
+            <Cup count={1} />
+            <Cup count={5} />
         </div>
         </>
     )
