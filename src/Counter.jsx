@@ -93,7 +93,7 @@ const Counter=({count, Data})=>{
                 <div className="container">
                     
                     <div className="user-card">
-                        <img className="img-style" src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img className="img-style" src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div className="text-wrap">
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -118,7 +118,7 @@ const Counter=({count, Data})=>{
                 <div style={{display: grid?'flex':'block', flexWrap:'wrap'}}>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -126,7 +126,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -134,7 +134,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -142,7 +142,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -150,7 +150,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -158,7 +158,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -166,7 +166,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>
@@ -174,7 +174,7 @@ const Counter=({count, Data})=>{
                     </div>
 
                     <div style={cardStyle}>
-                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" srcset="" />
+                        <img style={{width:'200px'}} src="https://mrwallpaper.com/images/hd/cool-profile-picture-paper-bag-head-4co57dtwk64fb7lv.jpg" alt="" />
                         <div style={{padding:'5px', color:textcolor}}>
                             <h4>Hiral Patel</h4>
                             <p>Software Developer</p>

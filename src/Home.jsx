@@ -62,7 +62,7 @@ function Home(){
             
             <br />
 
-            <input type="text" value={userObj.name} id={userObj.name} />
+            <input type="text" value={userObj.name} id={userObj.name} readOnly={true} />
             
             <button onClick={callFun}>click Me</button>
             <button onClick={()=>fruitName('Apple')}>Apple</button>
