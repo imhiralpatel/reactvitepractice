@@ -49,6 +49,25 @@ function State(){
     }
 
     // 47. Updating Array in State
+    const [uname, setUname]= useState([
+        'Hiral','Jayna','Hilu','Jayu'
+    ])
+    const [dataDetails, setDataDetails]= useState([
+        {name : 'Hiral', age:35},
+        {name : 'Jayna', age:29},
+        {name : 'Hilu', age:29},
+    ]);
+
+    const handelUserName=(name)=>{
+        uname[uname.length - 1]=name
+
+        setUname([...uname])
+    }
+    const handleUserAge=(age)=>{
+        dataDetails[dataDetails.length -1].age=age;
+
+        setDataDetails([...dataDetails])
+    }
 
 
     return(
@@ -142,7 +161,32 @@ function State(){
             <h2 style={{color:"maroon"}}>
                 47. Updating Array in State
             </h2>
-
+            <input type="text" onChange={(event)=>handelUserName(event.target.value)} placeholder="Update Last User Name" />
+            <br />
+            <br />
+            
+            {
+                uname.map((item, index)=>{
+                    return (
+                    <h4 key={index}>
+                        {item}
+                    </h4>
+                    );
+                })
+            }
+            <br />
+            <input type="text" onChange={(event)=>handleUserAge(event.target.value)} placeholder="Update Last User Age" />
+            <br />
+            <br />
+            {
+                dataDetails.map((item, index)=>{
+                    return (
+                    <h4 key={index}>
+                        {item.name}, {item.age}
+                    </h4>
+                    );
+                })
+            }
         </div>
         </>
     )
