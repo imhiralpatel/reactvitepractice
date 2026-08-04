@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { Fragment, useState } from "react"
 import User from "./User";
 
 function Skills(){
@@ -43,7 +43,11 @@ function Skills(){
         }];
 
     return(
-        <>
+        <> 
+        <h2>
+            50. fragment in React.js
+        </h2>
+        <Data />
         <div>
             <h2 style={{color:"maroon"}}>22. Handle Checkbox in react js</h2>
             <h5>Select Your Skills</h5>
@@ -91,7 +95,7 @@ function Skills(){
             
             <h2 style={{color:"maroon"}}>24. Loop in JSX with Map Function</h2>
 
-<table border="1">
+            <table border="1">
                 <thead>
                     <tr>
                         <td>Id</td>
@@ -150,3 +154,13 @@ function Skills(){
 }
 
 export default Skills
+
+function Data(){
+    return(
+        // <Fragment></Fragment> OR <></> both are SAME
+        <Fragment> 
+            <span>Hello </span>
+            <b>User</b>
+        </Fragment>
+    )
+}
