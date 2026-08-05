@@ -2,6 +2,8 @@ import { useState } from "react";
 import User from "./User"
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
+import College from "./College";
+import { SubjectContext } from "./ContextData";
 
 function State(){
     const [fruit, setFruit]=useState("Apple"); // State
@@ -69,9 +71,29 @@ function State(){
         setDataDetails([...dataDetails])
     }
 
+    // 52 Context API
+    const [sub, setSubject]=useState('')
 
     return(
         <>
+        <div style={{backgroundColor:'yellow', padding:'10px'}}>
+            <SubjectContext.Provider value={sub}>
+                <h2 style={{color:"maroon"}}>
+                    52. Context API
+                </h2>
+                <select value={sub} onChange={(e)=>setSubject(e.target.value)}>
+                    <option value="">Select</option>
+                    <option value="Maths">Maths</option>
+                    <option value="English">English</option>
+                    <option value="History">History</option>
+                </select>
+                
+                <button onClick={()=>setSubject('')}>Clear Subject</button>
+                <br /><br />
+                <College />
+            </SubjectContext.Provider>
+        </div>
+
         <h2 style={{color:"maroon"}}>
             14. State in React JS
         </h2>
@@ -89,7 +111,7 @@ function State(){
 
 
         <h2 style={{color:"maroon"}}>
-            17. Multiple Condition Else-IF in React Js
+            17. Multiple Condition Else-IF in React Js or Conditional Rendering
         </h2>
         <button onClick={()=>setCounter(counter + 1)}>Counter</button>
         {
