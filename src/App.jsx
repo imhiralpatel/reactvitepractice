@@ -8,8 +8,9 @@ import Prop from "./Props";
 import Skills from "./Skills";
 import PassFun from "./PassFun";
 import State from "./State";
-import Home from "./Home";
 import Hooks from "./Hooks";
+import Event from "./Event";
+import ReactRouter from "./ReactRouter";
 
 
 function App() {
@@ -37,12 +38,15 @@ function App() {
     <div>
       <h1>Hi, {userName}</h1>
 
+      <hr />
 
+      <ReactRouter />
       
+      <hr />
       <PassFun />
       
       <hr />
-      <Home />
+      <Event />
 
       <hr />
 

@@ -1,6 +1,7 @@
 import { useActionState, useId, useRef, useState, useTransition } from "react";
 import UserInput from "./UserInput";
 import { useFormStatus } from "react-dom";
+import useToggle from "./useToggle";
 
 function Hooks(){
 
@@ -75,7 +76,7 @@ function Hooks(){
     const [data, action, pending]=useActionState(handleBtnSubmit, undefined)
 
     // 53 - Custom Hooks in Reactjs
-    
+    const [cval, setCvalue] = useToggle(true)
 
     return(
         <>
@@ -144,7 +145,13 @@ function Hooks(){
                 53 - Custom Hooks in Reactjs
             </h2>
             <br />
-            
+             <button onClick={setCvalue}>Toggle Name</button>
+             <button onClick={()=>setCvalue(false)}>Hide Name</button>
+             <button onClick={()=>setCvalue(true)}>Show Name</button>
+             {
+                cval? <h3>Hiral Patel</h3> : null
+             }
+             
         </div>
         </>
     )
