@@ -10,7 +10,7 @@ body{
 }
 .header ul{
     display: flex;
-    width: 220px;
+    width: 500px;
     list-style-type: none;
     justify-content: space-around;
     margin: auto;
@@ -22,7 +22,18 @@ body{
     text-decoration: none;
     font-size: 20px;
 }
+.school .link{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+}
 .header .link h2{
     margin: 0;
 }
-
+.active{
+    font-weight: 800;
+}
+.custom-active{
+    font-weight: 900;
+    color: brown;
+}

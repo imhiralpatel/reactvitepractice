@@ -1,28 +1,40 @@
-import { Link } from "react-router"
+import { NavLink, Outlet } from "react-router"
 import './header.css'
 
 function NavBar() {
     return (
         <>
-            <div className="header">
-                <div>
-                    <Link className="link" to={"/"}>
-                        <h2>Logo</h2>
-                    </Link>
+            <div>
+                <div className="header">
+                    <div>
+                        <NavLink className="link" to={"/"}>
+                            <h2>Logo</h2>
+                        </NavLink>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <NavLink className={({isActive})=> isActive? 'link custom-active':'link'} to="/">Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="link" to="/in/user/about">About</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="link" to="/in/user/login">Login</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="link" to="/school">School</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="link" to="/users">Users</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="link" to="/list">List</NavLink>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <Link className="link" to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link className="link" to="/login">Login</Link>
-                        </li>
-                    </ul>
-                </div>
+                <Outlet />
             </div>
         </>
     )
