@@ -26,6 +26,12 @@ function NavBar() {
                                 <NavLink className="link" to="/school">School</NavLink>
                             </li>
                             <li>
+                                <NavLink className="link" to="/api/user">API User</NavLink>
+                            </li>
+                            <li>
+                                <NavLink className="link" to="/api/user/add">API User Add</NavLink>
+                            </li>
+                            <li>
                                 <NavLink className="link" to="/users">Users</NavLink>
                             </li>
                             <li>

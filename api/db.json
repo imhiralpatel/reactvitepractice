@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "fullName": "Hiral Patel",
+      "age": 35,
+      "email": "hiral@gmail.com",
+      "id": "DIFBx5a3Z9A"
+    },
+    {
+      "fullName": "Jayna Patel",
+      "age": 29,
+      "email": "jayna@gmail.com",
+      "id": "eL0Kbuec1jU"
+    },
+    {
+      "fullName": "Vishal Patel",
+      "age": 34,
+      "email": "vishal@gmail.com",
+      "id": "a3dI9Sq0-FA"
+    },
+    {
+      "fullName": "Yogesh Patel",
+      "age": "36",
+      "email": "yogesh@test.com",
+      "id": "lnWZAodv4WY"
+    },
+    {
+      "fullName": "mani Patel",
+      "age": "65",
+      "email": "mani@test.com",
+      "id": "qL4uOhK0UJM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

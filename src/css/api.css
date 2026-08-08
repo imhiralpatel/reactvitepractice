@@ -1,0 +1,12 @@
+.user-list{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #aaa;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+.user-list-header{
+    font-size: 20px;
+    font-weight: 800;
+}

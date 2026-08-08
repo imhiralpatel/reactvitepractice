@@ -10,6 +10,8 @@ import Student from "./Student"
 import UserProfile from "./UserProfile"
 import UserList from "./UserList"
 import UserDetails from "./UserDetails"
+import ApiCalls from "./ApiCalls"
+import UserAdd from "./UserAdd"
 
 function ReactRouter(){
     return(
@@ -29,6 +31,13 @@ function ReactRouter(){
                         <Route path="/in/user/about" element={<About />} />
                         <Route path="/in/user/login" element={<Login />} />
                     </Route>
+                </Route>
+                <Route path="api">
+                    <Route path="/api/user" element={<ApiCalls />} >
+
+                    </Route>
+                    
+                    <Route path="/api/user/add" element={<UserAdd />} />
                 </Route>
                 <Route path="/users/list?" element={<UserList />} />
                 <Route path="/users/:id/:name?" element={<UserDetails />} />
