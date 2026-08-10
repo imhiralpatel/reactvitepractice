@@ -1,17 +1,16 @@
 import style from './css/UserProfile.module.css'
 import styled from 'styled-components';
 
+const Heading = styled.h1({
+    color:"red",
+    border:"1px solid #000",
+});
+
 function UserProfile(){
     
 // const Heading =styled.h4`
 // color:red;
 // `
-
-const Heading=styled.h1({
-    color:'red',
-    border:'1px solid #000'
-})
-
     return(
         <>
             <div>

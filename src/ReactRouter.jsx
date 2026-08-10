@@ -12,6 +12,7 @@ import UserList from "./UserList"
 import UserDetails from "./UserDetails"
 import ApiCalls from "./ApiCalls"
 import UserAdd from "./UserAdd"
+import UserEdit from "./UserEdit"
 
 function ReactRouter(){
     return(
@@ -38,6 +39,7 @@ function ReactRouter(){
                     </Route>
                     
                     <Route path="/api/user/add" element={<UserAdd />} />
+                    <Route path="/api/user/edit/:id" element={<UserEdit />} />
                 </Route>
                 <Route path="/users/list?" element={<UserList />} />
                 <Route path="/users/:id/:name?" element={<UserDetails />} />

@@ -15,7 +15,7 @@
     {
       "fullName": "Vishal Patel",
       "age": 34,
-      "email": "vishal@gmail.com",
+      "email": "vishal@test.com",
       "id": "a3dI9Sq0-FA"
     },
     {
@@ -23,12 +23,6 @@
       "age": "36",
       "email": "yogesh@test.com",
       "id": "lnWZAodv4WY"
-    },
-    {
-      "fullName": "mani Patel",
-      "age": "65",
-      "email": "mani@test.com",
-      "id": "qL4uOhK0UJM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
