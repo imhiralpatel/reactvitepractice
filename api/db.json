@@ -25,5 +25,15 @@
       "id": "lnWZAodv4WY"
     }
   ],
+  "skills": [
+    {
+      "name": "html5",
+      "id": "hIpkCNSiKts"
+    },
+    {
+      "name": "css3",
+      "id": "IYKZjqCZI9w"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

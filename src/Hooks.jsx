@@ -1,4 +1,4 @@
-import { useActionState, useId, useReducer, useRef, useState, useTransition } from "react";
+import { useActionState, useEffect, useEffectEvent, useId, useOptimistic, useReducer, useRef, useState, useTransition } from "react";
 import UserInput from "./UserInput";
 import { useFormStatus } from "react-dom";
 import useToggle from "./useToggle";
@@ -92,6 +92,58 @@ function Hooks(){
 
     // 67 useReducerhook | Do not use useState here
     const [state, dispatch] = useReducer(reducer, emptyData)
+
+    // 69 - useOptimistic Hook: The Future of Optimistic UI Updates
+    const [skills, setSkills]= useState([]);
+    const [iname, setIName]= useState([]);
+    const [optSkills, setOptSkills]= useOptimistic(skills);
+
+    useEffect(()=>{
+        getSkill()
+    }, []);
+
+    const getSkill = async ()=>{
+        let resp= await fetch('http://localhost:3000/skills');
+        resp = await resp.json();
+        setSkills(resp);
+    }
+
+    function sleep(ms){
+        return new Promise(resolve=>setTimeout(resolve, ms))
+    }
+
+    const addSkill = async (event) => {
+        const id = Math.random() * 100000;
+        setOptSkills((prrev)=>[...prev,{name, id}])
+        let resp= await fetch('http://localhost:3000/skills', {
+            method:"post",
+            body: JSON.stringify({name, id})
+        });
+
+        await sleep(3000)
+
+        resp = await resp.json();
+
+        if(resp){
+            getSkill()
+        }
+    }
+
+    // useEffectEvent
+    const [ecount, setECount]=useState(0)
+
+    const countControl = useEffectEvent(()=>{
+        setECount(ecount + 1)
+    })
+
+    // useEffect(()=>{
+    //     const internal = setInterval(()=>{
+    //         countControl()
+    //     }, 1000)
+
+    //     return ()=>clearInterval(internal)
+    // }, [])
+    // Finish
 
     return(
         <>
@@ -193,6 +245,35 @@ function Hooks(){
             <br />
             <button onClick={()=>console.log(state)}>Add Details</button>
         </div>
+        <div>
+            <h2 style={{color:"maroon"}}>
+                69 - useOptimistic Hook: The Future of Optimistic UI Updates
+            </h2>
+            <br />
+            <form action={addSkill}>
+                <input type="text" onChange={(e)=>setIName(e.target.value)} placeholder="Enter Skills" />
+                <br />
+                <br />
+                <button>Add</button>
+            </form>
+            <br />
+            {
+                optSkills.map((item, index)=>(
+                    <div key={index}>
+                        {item.name}
+                    </div>
+                ))
+            }
+        </div>
+        
+        <div>
+            <h2 style={{color:"maroon"}}>useEffectEvent</h2>
+            <h3>
+                Count : {ecount}
+            </h3>
+        </div>
+
+
         </>
     )
 }

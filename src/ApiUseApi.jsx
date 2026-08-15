@@ -25,8 +25,8 @@ const Users=({userResourse})=>{
                 user list
             </h2>
             {
-                userData?.users?.map((user)=>(
-                    <h4>
+                userData?.users?.map((user, index)=>(
+                    <h4 key={index}>
                         {user.firstName}
                     </h4>
                 ))
