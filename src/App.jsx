@@ -12,6 +12,8 @@ import Hooks from "./Hooks";
 import Event from "./Event";
 import ReactRouter from "./ReactRouter";
 import ApiCalls from "./ApiCalls";
+import LazyLoding from "./LazyLoding";
+import ApiUseApi from "./ApiUseApi";
 
 
 function App() {
@@ -46,6 +48,10 @@ function App() {
       <hr />
       <PassFun />
       
+      <hr />
+      <LazyLoding />
+      <hr />
+      <ApiUseApi />
       <hr />
       <Event />
 

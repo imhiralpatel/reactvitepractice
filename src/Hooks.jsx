@@ -1,7 +1,19 @@
-import { useActionState, useId, useRef, useState, useTransition } from "react";
+import { useActionState, useId, useReducer, useRef, useState, useTransition } from "react";
 import UserInput from "./UserInput";
 import { useFormStatus } from "react-dom";
 import useToggle from "./useToggle";
+
+// 67 useReducerhook | Do not use useState here
+const emptyData={
+    name:'',
+    password:'',
+    email:'',
+    city:'',
+    address:''
+}
+const reducer=(data, action)=>{
+    return {...data, [action.type]:action.val}
+}
 
 function Hooks(){
 
@@ -78,6 +90,9 @@ function Hooks(){
     // 53 - Custom Hooks in Reactjs
     const [cval, setCvalue] = useToggle(true)
 
+    // 67 useReducerhook | Do not use useState here
+    const [state, dispatch] = useReducer(reducer, emptyData)
+
     return(
         <>
             <div>
@@ -152,6 +167,31 @@ function Hooks(){
                 cval? <h3>Hiral Patel</h3> : null
              }
              
+        </div>
+        <div>
+            <h2 style={{color:"maroon"}}>
+                67 - useReducerhook | Do not use useState here
+            </h2>
+            <br />
+            <input type="text" onChange={(event)=>dispatch({val:event.target.value, type:'name'})} placeholder="Enter Name" />
+            <br /><br />
+            <input type="text" onChange={(event)=>dispatch({val:event.target.value, type:'password'})} placeholder="Enter Password" />
+            <br /><br />
+            <input type="text" onChange={(event)=>dispatch({val:event.target.value, type:'email'})} placeholder="Enter Email" />
+            <br /><br />
+            <input type="text" onChange={(event)=>dispatch({val:event.target.value, type:'city'})} placeholder="Enter City" />
+            <br /><br />
+            <input type="text" onChange={(event)=>dispatch({val:event.target.value, type:'address'})} placeholder="Enter Address" />
+            <br /><br />
+            <ul>
+                <li>Name : {state.name}</li>
+                <li>Password : {state.password}</li>
+                <li>Email : {state.email}</li>
+                <li>City : {state.city}</li>
+                <li>Address : {state.address}</li>
+            </ul>
+            <br />
+            <button onClick={()=>console.log(state)}>Add Details</button>
         </div>
         </>
     )

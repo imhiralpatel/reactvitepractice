@@ -33,18 +33,18 @@ function Login() {
 
     // 66 validation with useActionState
     const handleLogin = (prevData, fromData) => {
-        let uname = fromData.get('username')
-        let upass = fromData.get('password')
-        let regex = /^[A-Z0-9]+$/i
+        const uname = fromData.get('username')
+        const upass = fromData.get('password')
+        const regex = /^[A-Z0-9]+$/i
 
-        if (uname || uname.length < 5) {
-            return { error: "Username can not empty. UserName should not container more than 5 character", uname, upass }
+        if ( !uname || uname.length < 5) {
+            return { error: "Username can not be empty OR UserName should not container more than 5 character", uname, upass }
         }
-        else if (upass || !regex.test(upass)) {
+        else if (!regex.test(upass)) {
             return { error: "Password can not empty. Password can container only numbers and alphabets", uname, upass }
         }
         else {
-            return { message: "logine done", uname, upass }
+            return { message: "Login Done", uname, upass }
         }
     }
     const [data, action, pending] = useActionState(handleLogin)
