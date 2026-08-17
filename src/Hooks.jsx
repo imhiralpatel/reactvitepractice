@@ -103,7 +103,7 @@ function Hooks(){
     }, []);
 
     const getSkill = async ()=>{
-        let resp= await fetch('http://localhost:3000/skills');
+        let resp= await fetch('http://localhost:3000/skillr');
         resp = await resp.json();
         setSkills(resp);
     }
@@ -115,7 +115,7 @@ function Hooks(){
     const addSkill = async (event) => {
         const id = Math.random() * 100000;
         setOptSkills((prrev)=>[...prev,{name, id}])
-        let resp= await fetch('http://localhost:3000/skills', {
+        let resp= await fetch('http://localhost:3000/skillr', {
             method:"post",
             body: JSON.stringify({name, id})
         });
